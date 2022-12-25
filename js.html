@@ -6,7 +6,10 @@
 </head>
 <body>
   <script>
-    // Your JavaScript goes here!
+   function playRound(userChoice,computerChoice){
+    if (userChoice==computerChoice)return "no result or tie round"
+    
+   }
    let userChoice=prompt("enter your choice")
    let computerChoice= Math.random()
    if(computerChoice<=0.33){
@@ -18,7 +21,8 @@
    else{
     computerChoice="scissors"
    }
-   
+   // calling function 
+   console.log(playRound(userChoice,computerChoice))
     
   </script>
 </body>

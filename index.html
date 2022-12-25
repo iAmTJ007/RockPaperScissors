@@ -12,7 +12,7 @@
     let i="invalid input,wrong input"
    function playRound(userChoice,computerChoice){
     if (userChoice==computerChoice)return "no result or tie round"
-     else if(userChoice!="paper"||"scissors"||"rock")return  i
+     else if(userChoice!="paper"||userChoice!="scissors"||userChoice!="rock")return  i
   else if((userChoice=="paper"&&computerChoice=="scissors")||(userChoice=="scissors"
   &&computerChoice=="rock")||(userChoice=="rock"&&computerChoice=="paper"))
   {

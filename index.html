@@ -12,7 +12,6 @@
     let i="invalid input,wrong input"
    function playRound(userChoice,computerChoice){
     if (userChoice==computerChoice)return "no result or tie round"
-     else if(userChoice!="paper"||userChoice!="scissors"||userChoice!="rock")return  i
   else if((userChoice=="paper"&&computerChoice=="scissors")||(userChoice=="scissors"
   &&computerChoice=="rock")||(userChoice=="rock"&&computerChoice=="paper"))
   {
@@ -20,11 +19,13 @@
     return l
   
   }
-  else{
+  else if((userChoice=="paper"&&computerChoice=="rock")||(userChoice=="scissors"
+  &&computerChoice=="paper")||(userChoice=="rock"&&computerChoice=="scissors")){
     return w
    
   }
-   }
+  else return i   
+   
    let userChoice=prompt("enter your choice")
    let computerChoice= Math.random()
    if(computerChoice<=0.33){

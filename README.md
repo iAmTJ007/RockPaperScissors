@@ -1,2 +1,2 @@
-# tictactoe
-tictactoe game using html css javascript.
+# rockpaperscissors
+rockpaperscissors game using html css javascript.

@@ -8,7 +8,14 @@
   <script>
    function playRound(userChoice,computerChoice){
     if (userChoice==computerChoice)return "no result or tie round"
-    
+  else if((userChoice=="paper"&&computerChoice=="scissors")||(userChoice=="scissors"
+  &&computerChoice=="rock")||(userChoice=="rock"&&computerChoice=="paper"))
+  {
+    return "sorry you lost against computer"
+  }
+  else{
+    return "congrats you won against computer"
+  }
    }
    let userChoice=prompt("enter your choice")
    let computerChoice= Math.random()
@@ -21,6 +28,8 @@
    else{
     computerChoice="scissors"
    }
+   console.log("Your Choice:",userChoice)
+   console.log("computer choice:",computerChoice)
    // calling function 
    console.log(playRound(userChoice,computerChoice))
     

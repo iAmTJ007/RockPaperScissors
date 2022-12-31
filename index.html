@@ -5,28 +5,31 @@
 </head>
 <body>
   <h1>this is a game</h1>
+  <button id="rock">Rock</button>
+  <button id="paper">Paper</button>
+  <button id="scissors">Scissors</button>
   
   <script>
     let w="you won"
     let l="you lost"
     let i="invalid input,wrong input"
    function playRound(userChoice,computerChoice){
+    document.write("<h1>Computer's choice:</h1>",computerChoice)  
     if (userChoice==computerChoice)return "no result or tie round"
   else if((userChoice=="paper"&&computerChoice=="scissors")||(userChoice=="scissors"
   &&computerChoice=="rock")||(userChoice=="rock"&&computerChoice=="paper"))
-  {
-    
+  { 
     return l
-  
   }
   else if((userChoice=="paper"&&computerChoice=="rock")||(userChoice=="scissors"
   &&computerChoice=="paper")||(userChoice=="rock"&&computerChoice=="scissors")){
-    return w
-   
+    
+    return w   
   }
     else return i   }
+
    
-   let userChoice=prompt("enter your choice")
+  
    let computerChoice= Math.random()
    if(computerChoice<=0.33){
     computerChoice="rock"
@@ -37,10 +40,24 @@
    else{
     computerChoice="scissors"
    }
-   document.write("<h1>Your choice:</h1>",userChoice)
-   document.write("<h1>Computer's choice:</h1>",computerChoice)
+   const b1=document.querySelector('#rock')
+   b1.addEventListener('click',()=>{
+    let userChoice="rock"
+    document.write("<h1>Result</h1>",playRound("rock",computerChoice))
+   })
+   const b2=document.querySelector('#paper')
+   b2.addEventListener('click',()=>{
+    let userChoice="paper"
+    document.write("<h1>Result</h1>",playRound("paper",computerChoice))
+   })
+   const b3=document.querySelector('#scissors')
+   b3.addEventListener('click',()=>{
+    let userChoice="scissors"
+    document.write("<h1>Result</h1>",playRound("scissors",computerChoice))
+   })
+   
    // calling function 
-   document.write("<h2>Result</h2>",playRound(userChoice,computerChoice))
+   //document.write("<h2>Result</h2>",playRound(userChoice,computerChoice))
     
   </script>
 </body>

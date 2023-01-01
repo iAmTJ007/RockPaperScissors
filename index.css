@@ -6,9 +6,21 @@ body{
     height: 1vh;
     
 }
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+img{
+    height: 30vh;
+    width: 18vw;
+    object-fit: contain;
+    
+}
+
 h1{
     font-size: 6rem;
-    padding-top: 2.5rem;
+    padding-top: 1.5rem;
 }
 p{
     font-size: 2rem;

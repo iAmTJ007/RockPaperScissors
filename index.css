@@ -3,9 +3,12 @@ body{
     text-align: center;
     color: white;
     font-family: 'Lacquer', cursive;
+    height: 1vh;
+    
 }
 h1{
-    font-size: 4rem;
+    font-size: 6rem;
+    padding-top: 2.5rem;
 }
 p{
     font-size: 2rem;

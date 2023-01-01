@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(31, 20, 37);
+    text-align: center;
+    color: white;
+    font-family: 'Lacquer', cursive;
+}
+h1{
+    font-size: 4rem;
+}
+p{
+    font-size: 2rem;
+}

@@ -4,56 +4,65 @@
   <title>Page Title</title>
 </head>
 <body>
-  <h1>this is a game</h1>
+  <h1>MAN vs COMPUTER</h1>
+  <p>Let's see if you can save humankind by beating the computer...</p>
+  <p>Choose your Weapon!</p>
   <button id="rock">Rock</button>
   <button id="paper">Paper</button>
   <button id="scissors">Scissors</button>
+  <h2>Result</h2>
   
 <script>
    function playRound(userChoice,computerChoice){
-    div.append("computer choice:",computerChoice) 
     if (userChoice==computerChoice)
     {
-      div.append(" game tied")
+      div.append("game tied because computer also chose ",computerChoice)
     }
-  else if((userChoice=="paper"&&computerChoice=="scissors")||(userChoice=="scissors"
-  &&computerChoice=="rock")||(userChoice=="rock"&&computerChoice=="paper"))
+  else if((userChoice=="Paper"&&computerChoice=="Scissors")||(userChoice=="Scissors"
+  &&computerChoice=="Rock")||(userChoice=="Rock"&&computerChoice=="Paper"))
   { 
-    div.append(" you won")
+    div.append(" you lost as the computer chose ",computerChoice)
   }
-  else if((userChoice=="paper"&&computerChoice=="rock")||(userChoice=="scissors"
-  &&computerChoice=="paper")||(userChoice=="rock"&&computerChoice=="scissors")){ 
-    div.append(" you lost")
+  else if((userChoice=="Paper"&&computerChoice=="Rock")||(userChoice=="Scissors"
+  &&computerChoice=="Paper")||(userChoice=="Rock"&&computerChoice=="Scissors")){ 
+    div.append(" you won as the computer chose ",computerChoice)
   }
     }
-
-  const content=document.querySelector('h1');
-  const div=document.createElement('div')
-  content.appendChild(div)
-   let computerChoice= Math.random()
-   if(computerChoice<=0.33){
-    computerChoice="rock"
+function playComputer(){
+   let computer= Math.random()
+   if(computer<=0.33){
+    return "Rock"
    }
-   else if(computerChoice>0.33 && computerChoice<0.66){
-    computerChoice="paper"
+   else if(computer>0.33 && computer<0.66){
+     return "Paper"
    }
    else{
-    computerChoice="scissors"
+     return "Scissors"
    }
+  }
+
+  const content=document.querySelector('h2');
+  const div=document.createElement('div')
+  content.appendChild(div)
+  
+   
    const b1=document.querySelector('#rock')
    b1.addEventListener('click',()=>{
-    let userChoice="rock"
-    playRound("rock",computerChoice)
+    let userChoice="Rock"
+    let computerChoice=playComputer()
+    playRound("Rock",computerChoice)
    })
    const b2=document.querySelector('#paper')
    b2.addEventListener('click',()=>{
-    let userChoice="paper"
-    playRound("paper",computerChoice)
+    let userChoice="Paper"
+    let computerChoice=playComputer()
+    playRound("Paper",computerChoice)
    })
    const b3=document.querySelector('#scissors')
    b3.addEventListener('click',()=>{
-    let userChoice="scissors"
-    playRound("scissors",computerChoice)
+    let userChoice="Scissors"
+    let computerChoice=playComputer()
+    playRound("Scissors",computerChoice)
    })
    
    // calling function 
